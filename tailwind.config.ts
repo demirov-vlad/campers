@@ -30,11 +30,11 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "bg-img-1": "url('/img-1.png')",
-        "bg-img-2": "url('/img-2.png')",
-        "feature-bg": "url('/feature-bg.png')",
-        pattern: "url('/pattern.png')",
-        "pattern-2": "url('/pattern-bg.png')",
+        "bg-img-1": "url('/campers/img-1.png')",
+        "bg-img-2": "url('/campers/img-2.png')",
+        "feature-bg": "url('/campers/feature-bg.png')",
+        pattern: "url('/campers/pattern.png')",
+        "pattern-2": "url('/campers/pattern-bg.png')",
       },
       screens: {
         xs: "400px",
