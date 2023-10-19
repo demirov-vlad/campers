@@ -15,8 +15,8 @@ const Features = () => {
           <Image
             src="/phone.png"
             alt="phone"
-            width={440}
-            height={1000}
+            width={428}
+            height={815}
             className="feature-phone"
           />
         </div>
