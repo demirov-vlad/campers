@@ -44,7 +44,6 @@ const Navbar = () => {
           variant="btn_dark_green"
         />
       </div>
-      {/*className="inline-block cursor-pointer lg:hidden"*/}
       <button
         onClick={handleClick}
         className="flex flex-col justify-center items-center lg:hidden"
