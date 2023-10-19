@@ -1,13 +1,28 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { NAV_LINKS } from "@/constants";
 import Button from "@/components/Button";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  //Handles the opening and closing of our nav
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="flexBetween max-container padding-container relative z-30 py-5">
       <Link href="/">
-        <Image src="/campers/hilink-logo.svg" alt="Hilink" width={74} height={29} />
+        <Image
+          src="/campers/hilink-logo.svg"
+          alt="Hilink"
+          width={74}
+          height={29}
+        />
       </Link>
       <ul className="hidden h-full gap-12 lg:flex">
         {NAV_LINKS.map((link) => (
@@ -29,13 +44,27 @@ const Navbar = () => {
           variant="btn_dark_green"
         />
       </div>
-      <Image
-        src="/campers/menu.svg"
-        alt="menu"
-        width={32}
-        height={32}
-        className="inline-block cursor-pointer lg:hidden"
-      />
+      {/*className="inline-block cursor-pointer lg:hidden"*/}
+      <button
+        onClick={handleClick}
+        className="flex flex-col justify-center items-center lg:hidden"
+      >
+        <span
+          className={`bg-black block transition-all duration-300 ease-out h-[2px] w-[30px] rounded-md ${
+            isOpen ? "-rotate-45 translate-y-1" : "-translate-y-0.5"
+          }`}
+        ></span>
+        <span
+          className={`bg-black block transition-all duration-300 ease-out h-[2px] w-[30px] rounded-md my-[2.6px] ${
+            isOpen ? "opacity-0" : "opacity-100"
+          }`}
+        ></span>
+        <span
+          className={`bg-black block transition-all duration-300 ease-out h-[2px] w-[30px] rounded-md ${
+            isOpen ? "rotate-45 -translate-y-1" : "translate-y-0.5"
+          }`}
+        ></span>
+      </button>
     </nav>
   );
 };
