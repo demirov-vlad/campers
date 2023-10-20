@@ -4,8 +4,8 @@ import Button from "@/components/Button";
 const Hero = () => {
   return (
     <section
-      className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28
-    lg:py-20 xl:flex-row"
+      className="max-container padding-container flex flex-col gap-20 pt-[109px] pb-32 md:gap-28
+    lg:py-20 lg:pt-[178px] xl:flex-row"
     >
       <div className="hero-map" />
       {/*LEFT*/}
@@ -62,7 +62,12 @@ const Hero = () => {
           <div className="flex flex-col">
             <div className="flexBetween">
               <p className="regular-16 text-gray-20">Location</p>
-              <Image src="/campers/close.svg" alt="close" width={24} height={24} />
+              <Image
+                src="/campers/close.svg"
+                alt="close"
+                width={24}
+                height={24}
+              />
             </div>
             <p className="bold-20 text-white">Aguas Calientes</p>
           </div>
